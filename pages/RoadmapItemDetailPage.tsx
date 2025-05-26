@@ -3,7 +3,7 @@ import React, { useEffect, useState, useMemo } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 // Fix: Explicitly import from constants.tsx to resolve module issue
 import { ROADMAPS_DATA, RESOURCES_DATA } from '../constants.tsx';
-import { Roadmap, RoadmapModule, RoadmapItem as RoadmapItemType, Resource } from '../types';
+import { Roadmap, RoadmapModule, RoadmapItem as RoadmapItemType } from '../types';
 import ResourceCard from '../components/ResourceCard'; // Reutilizar ResourceCard si es adecuado
 import { useAppContext } from '../contexts/AppContext';
 
@@ -16,7 +16,7 @@ const ArrowLeftIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
 const RoadmapItemDetailPage: React.FC = () => {
   const { roadmapId, moduleId, itemId } = useParams<{ roadmapId: string; moduleId: string; itemId: string }>();
   const navigate = useNavigate();
-  const { darkMode } = useAppContext(); // For consistent styling if needed
+  useAppContext(); // For consistent styling if needed
 
   const [roadmap, setRoadmap] = useState<Roadmap | null>(null);
   const [module, setModule] = useState<RoadmapModule | null>(null);

@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 // Fix: Explicitly import from constants.tsx to resolve module issue
 import { ROADMAPS_DATA } from '../constants.tsx';
-import { Roadmap, RoadmapModule, RoadmapItem as RoadmapItemType } from '../types';
+import { Roadmap} from '../types';
 import { useAppContext } from '../contexts/AppContext';
 
 const ChevronDownIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
@@ -48,7 +48,7 @@ const AccordionSection: React.FC<AccordionSectionProps> = ({ title, children, in
 
 const TechnicalTestPage: React.FC = () => {
   const [selectedRoadmapId, setSelectedRoadmapId] = useState<string | null>(null);
-  const { darkMode } = useAppContext();
+    useAppContext();
 
   const selectedRoadmap = ROADMAPS_DATA.find(r => r.id === selectedRoadmapId);
 
