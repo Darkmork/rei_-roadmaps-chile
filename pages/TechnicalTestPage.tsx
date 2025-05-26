@@ -1,7 +1,8 @@
 
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ROADMAPS_DATA } from '../constants';
+// Fix: Explicitly import from constants.tsx to resolve module issue
+import { ROADMAPS_DATA } from '../constants.tsx';
 import { Roadmap, RoadmapModule, RoadmapItem as RoadmapItemType } from '../types';
 import { useAppContext } from '../contexts/AppContext';
 

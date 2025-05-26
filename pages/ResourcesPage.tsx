@@ -1,7 +1,8 @@
 
 import React, { useState, useMemo } from 'react';
 import ResourceCard from '../components/ResourceCard';
-import { RESOURCES_DATA } from '../constants';
+// Fix: Explicitly import from constants.tsx to resolve module issue
+import { RESOURCES_DATA } from '../constants.tsx';
 import { Resource } from '../types';
 
 const ResourceTypeFilters: Resource['type'][] = ['Curso Online', 'Documentación', 'Comunidad', 'Herramienta', 'Artículo'];
@@ -77,4 +78,3 @@ const ResourcesPage: React.FC = () => {
 };
 
 export default ResourcesPage;
-    

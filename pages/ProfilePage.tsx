@@ -1,7 +1,8 @@
 
 import React, { useState, useEffect } from 'react';
 import { useAppContext } from '../contexts/AppContext';
-import { ROADMAPS_DATA } from '../constants';
+// Fix: Explicitly import from constants.tsx to resolve module issue
+import { ROADMAPS_DATA } from '../constants.tsx';
 import ProgressBar from '../components/ProgressBar';
 import ResourceCard from '../components/ResourceCard';
 import { Link, useNavigate } from 'react-router-dom';

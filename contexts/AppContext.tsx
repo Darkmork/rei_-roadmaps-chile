@@ -3,7 +3,8 @@ import React, { createContext, useContext, ReactNode } from 'react';
 import useLocalStorage from '../hooks/useLocalStorage';
 import { UserProfile, RoadmapProgress, Resource } from '../types';
 // Fix: Import ROADMAPS_DATA at the top level using ES6 import.
-import { ROADMAPS_DATA, RESOURCES_DATA } from '../constants';
+// Fix: Explicitly import from constants.tsx to resolve module issue
+import { ROADMAPS_DATA, RESOURCES_DATA } from '../constants.tsx';
 
 interface AppContextType {
   darkMode: boolean;

@@ -2,7 +2,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import RoadmapCard from '../components/RoadmapCard';
-import { ROADMAPS_DATA } from '../constants';
+// Fix: Explicitly import from constants.tsx to resolve module issue
+import { ROADMAPS_DATA } from '../constants.tsx';
 
 const DocumentMagnifyingGlassIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" {...props}>

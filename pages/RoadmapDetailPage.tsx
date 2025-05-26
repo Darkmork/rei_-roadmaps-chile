@@ -1,7 +1,8 @@
 
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom'; // Link importado
-import { ROADMAPS_DATA } from '../constants';
+// Fix: Explicitly import from constants.tsx to resolve module issue
+import { ROADMAPS_DATA } from '../constants.tsx';
 import { Roadmap, RoadmapModule, RoadmapItem as RoadmapItemType } from '../types';
 import ProgressBar from '../components/ProgressBar';
 import { useAppContext } from '../contexts/AppContext';

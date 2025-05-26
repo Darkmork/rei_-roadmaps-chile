@@ -1,7 +1,8 @@
 
 import React, { useEffect, useState, useMemo } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
-import { ROADMAPS_DATA, RESOURCES_DATA } from '../constants';
+// Fix: Explicitly import from constants.tsx to resolve module issue
+import { ROADMAPS_DATA, RESOURCES_DATA } from '../constants.tsx';
 import { Roadmap, RoadmapModule, RoadmapItem as RoadmapItemType, Resource } from '../types';
 import ResourceCard from '../components/ResourceCard'; // Reutilizar ResourceCard si es adecuado
 import { useAppContext } from '../contexts/AppContext';
