@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>REI: Roadmaps Chile</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class', // or 'media'
+      theme: {
+        extend: {
+          colors: {
+            'rei-blue': '#0077B6',
+            'rei-blue-dark': '#005A8D',
+            'rei-green': '#00BFA6',
+            'rei-bg-light': '#F0F4F8',
+            'rei-bg-dark': '#1A202C',
+            'rei-text-light': '#1A202C',
+            'rei-text-dark': '#E2E8F0',
+            'rei-card-light': '#FFFFFF',
+            'rei-card-dark': '#2D3748',
+          }
+        }
+      }
+    }
+  </script>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.6.1"
+  }
+}
+</script>
+  <!-- Add Babel Standalone -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body class="bg-rei-bg-light dark:bg-rei-bg-dark text-rei-text-light dark:text-rei-text-dark">
+  <div id="root"></div>
+  <!-- Modify script type to text/babel, ensure it's processed as a module, and add presets -->
+  <script type="text/babel"
+          data-presets="env,react,typescript"
+          data-type="module"
+          src="/index.tsx"></script>
+</body>
+</html><link rel="stylesheet" href="index.css">
+<script src="index.tsx" type="module"></script>
