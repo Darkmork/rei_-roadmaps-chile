@@ -45,8 +45,8 @@ const Footer: React.FC = () => {
             <FacebookIcon className="w-6 h-6" />
           </a>
         </div>
-        <p>&copy; {new Date().getFullYear()} REI: Roadmaps Chile. Todos los derechos reservados.</p>
-        <p className="text-sm mt-1">Tu guía en el mundo tech.</p>
+        <p>&copy; {new Date().getFullYear()} REI: PREPARACIÓN PARA ESTUDIANTES DE INGENIERÍA INFORMÁTICA. Todos los derechos reservados.</p>
+        <p className="text-sm mt-1">Tu guía en el camino al mundo tech.</p>
       </div>
     </footer>
   );

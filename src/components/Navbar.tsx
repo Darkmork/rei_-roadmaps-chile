@@ -1,4 +1,5 @@
 
+/// <reference types="react" />
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useAppContext } from '../contexts/AppContext';
@@ -29,8 +30,18 @@ const Navbar: React.FC = () => {
     <nav className="bg-rei-card-light dark:bg-rei-card-dark shadow-md sticky top-0 z-50">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <Link to="/" className="text-2xl font-bold text-rei-blue dark:text-rei-green">
-            REI: Roadmaps Chile
+          <Link
+              to="/"
+              className="flex items-center gap-3 text-2xl font-bold text-rei-blue dark:text-rei-green no-underline"
+          >
+            <img
+                src="/src/imagenes/ChatGPT Image 25 may 2025, 21_14_26.png"
+                alt="Logo REI"
+                className="h-16 w-16 object-contain" // Tamaño aumentado (56px)
+            />
+            <span className="leading-tight"> {/* Ajuste fino de alineación */}
+              REI: ROADMAP PREPARACIÓN PARA ESTESTUDIANTES DE INGENIERÍA INFORMÁTICA
+  </span>
           </Link>
           <div className="flex items-center space-x-4">
             <Link to="/" className="text-gray-600 dark:text-gray-300 hover:text-rei-blue dark:hover:text-rei-green transition-colors">Inicio</Link>
